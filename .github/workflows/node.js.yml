@@ -27,6 +27,7 @@ jobs:
         node-version: ${{ strategy.matrix.node-version }}
     - run: npm shrinkwrap
     - run: npm install
+    - run: npm install express
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
